@@ -52,9 +52,9 @@ url = (
     "&rows=0"
     "&facet=true"
     "&facet.pivot=submittedDateY_i,submitType_s"
-    f"&fq=collCode_s:{coll_code}"
+    f"&fq=collCode_s:({coll_code})"
     f"&fq=submittedDateY_i:[{year_start} TO {year_end}]"
-    f"&fq=docType_s:{doc_type}"
+    f"&fq=docType_s:({doc_type})"
     "&facet.sort=index"
     "&wt=json"
 )

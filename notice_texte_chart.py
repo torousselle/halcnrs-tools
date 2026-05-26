@@ -51,9 +51,9 @@ url = (
     f"?q=*:*"
     "&rows=0"
     "&facet=true"
-    "&facet.pivot=submittedDateY_i,submitType_s"
+    "&facet.pivot=publicationDateY_i,submitType_s"
     f"&fq=collCode_s:({coll_code})"
-    f"&fq=submittedDateY_i:[{year_start} TO {year_end}]"
+    f"&fq=publicationDateY_i:[{year_start} TO {year_end}]"
     f"&fq=docType_s:({doc_type})"
     "&facet.sort=index"
     "&wt=json"
@@ -78,7 +78,7 @@ data = response.json()
 # Extraction des données
 # -----------------------------------
 
-pivot_data = data["facet_counts"]["facet_pivot"]["submittedDateY_i,submitType_s"]
+pivot_data = data["facet_counts"]["facet_pivot"]["publicationDateY_i,submitType_s"]
 
 results = []
 
